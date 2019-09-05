@@ -7,7 +7,8 @@ const style = {
 };
 
 class MapContainer extends React.Component {
-  render() {
+
+render() {
     return (
       <Map
         google={this.props.google}
@@ -23,6 +24,6 @@ class MapContainer extends React.Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyB0pyabJG-sUhHBG-qn9jtk1RoL3YZTaeg'
+  // apiKey: 'AIzaSyB0pyabJG-sUhHBG-qn9jtk1RoL3YZTaeg'
 })(MapContainer);
 
