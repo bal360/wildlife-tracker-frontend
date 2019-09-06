@@ -6,7 +6,8 @@ import SightingForm from './components/SightingForm'
 
 class App extends React.Component {
   state = {
-    animalSightings: []
+    animalSightings: [],
+    searchForm
   }
 
   componentDidMount() {
@@ -39,10 +40,10 @@ render() {
     return (
       <div className="App">
         {/* <MapContainer /> */}
-        {this.state.animalSightings.map(sighting => 
+        {/* {this.state.animalSightings.map(sighting => 
           <div>{sighting.animal}</div>
-        )}
-        <SightingForm />
+        )} */}
+        {/* <SightingForm /> */}
       </div>
     )
   }
