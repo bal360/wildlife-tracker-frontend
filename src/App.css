@@ -1,6 +1,28 @@
-.App {
-  text-align: center;
+body {
+  background-color: rgb(231, 224, 224);
 }
 
+/* .App {
+  text-align: center;
+} */
+
+/* main {
+  display: grid;
+  min-height: 100%;
+  justify-items: center;
+  grid-template-columns: 75px 1fr 1fr;
+  grid-template-rows: auto;
+} */
+
+/* .animal-sightings {
+  grid-column-start: 3;
+}; */
+
+
+
+
+/* .MapContainer {
+  margin-top: 100px;
+} */
 
 

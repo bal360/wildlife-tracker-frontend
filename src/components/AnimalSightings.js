@@ -1,19 +1,18 @@
-// import React from 'react';
+import React from 'react';
 
-// const AnimalSightings = (props) => {
+const AnimalSightings = (props) => {
     
-//     console.log('animalSightings', props.animalSightings);
+    const sightings = props.animalSightings.map(sighting => 
+        <div>{sighting.animal}</div>
+    )
     
-    
-    
-//     return(
-//         <div className="animal-sightings">
-//             <div>
-//                 {sightings}
-//                 {props.animalSightings.animal}
-//             </div>
-//         </div>
-//     )   
-// };
+    return(
+        <div className="animal-sightings">
+            <div>
+                {sightings}
+            </div>
+        </div>
+    )   
+};
 
-// export default AnimalSightings;
+export default AnimalSightings;
