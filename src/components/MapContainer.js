@@ -1,28 +1,47 @@
 import React from 'react';
 import { Map, GoogleApiWrapper, Marker, InfoWindow } from 'google-maps-react';
 
-const style = {
-  width: '50%',
-  height: '65%',
-};
-
 class MapContainer extends React.Component {
+  // constructor(props) {
+  //   super(props)
+  //   this.state = {
+  //     marks: []
+  //   }
+  // };
 
-render() {
+  // markers = (result) => { 
+  //   const markerArray = result.reduce((array, sighting) => {
+  //     const sightingObj = {
+  //       lat: sighting.latitude,
+  //       lng: sighting.longitude
+  //     }
+  //     array.push(sightingObj)
+  //     return array
+  //   }, [])
+  //   this.setState({marks: markerArray})
+  // }
+
+  render() {
+    console.log('marks', this.props.marks);
+    // this.markers(this.props.animalSightings)
     return (
       <React.Fragment>
         <Map
           className="map"
           google={this.props.google}
           zoom={12}
-          style={style}
+          style={{width: '70%', height: '25%'}}
           initialCenter={{
-          lat: 26.2361,
-          lng: 50.0393
-          }} >
-            <Marker name={'Dolores park'}
-              position={{lat: 37.759703, lng: -122.428093}} 
+          lat: 39,
+          lng: -104
+          }} 
+        >
+          {this.props.marks.map(marker => (
+            <Marker
+              position={{ lat: marker.lat, lng: marker.lng }}
+              key={marker.id}
             />
+          ))}
         </Map>
       </React.Fragment>
     );
@@ -30,6 +49,6 @@ render() {
 }
 
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyB0pyabJG-sUhHBG-qn9jtk1RoL3YZTaeg'
+  // apiKey: 'AIzaSyB0pyabJG-sUhHBG-qn9jtk1RoL3YZTaeg'
 })(MapContainer);
 
