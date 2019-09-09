@@ -1,10 +1,21 @@
 body {
-  background-color: rgb(231, 224, 224);
+  background-color: rgb(211, 177, 177);
 }
 
-/* .App {
+.app {
+  display: flex;
   text-align: center;
-} */
+}
+
+.sighting-form {
+  align-content: flex-start; 
+}
+
+.Navbar {
+  background-color: aquamarine;
+}
+
+
 
 /* main {
   display: grid;
@@ -21,8 +32,15 @@ body {
 
 
 
-/* .MapContainer {
+.MapContainer {
   margin-top: 100px;
-} */
+  margin-left: 100px;
+}
+
+.nav-link {
+  /* display: flex; */
+  /* justify-content: center; */
+  font-size: 30px;
+}
 
 
