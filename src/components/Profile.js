@@ -7,9 +7,9 @@ import SightingCard from '../components/SightingCard';
 
 const Profile = (props) => {
     
-    const { user, deleteSightings } = props
+    const { user, deleteUserSighting } = props
 
-    const sightings = props.animalSightings.map(sighting => {
+    const sightings = user.sightings.map(sighting => {
         return ( 
             <SightingCard 
                 id={sighting.id} 
@@ -18,7 +18,7 @@ const Profile = (props) => {
                 date={sighting.date} 
                 time={sighting.time} 
                 note={sighting.note} 
-                addFavorite={props.addFavorite}
+                deleteUserSighting={deleteUserSighting}
             />
         )
     });
@@ -29,9 +29,9 @@ const Profile = (props) => {
             className="profileJumbo"
             
         >
-                <h1>Name: {user.first} </h1>
-                <h2>Location: {user.location}</h2>
-                <h3>Email: {user.email}</h3>
+            <h1>Name: {user.first_name} {user.last_name} </h1>
+            <h2>Location: {user.city} {user.state}</h2>
+            <h3>Email: {user.email}</h3>
             <Button 
                 variant="primary" 
                 className="profileButton"

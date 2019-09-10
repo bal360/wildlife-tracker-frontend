@@ -6,7 +6,7 @@ import NavBar from './components/NavBar';
 import AddSearchModal from './components/AddSearchModal';
 import Profile from './components/Profile';
 import Home from './components/Home';
-
+import UpdateForm from './components/UpdateForm'
 
 
 class App extends React.Component {
@@ -26,7 +26,7 @@ class App extends React.Component {
     fetch('http://localhost:3000/users')
       .then(response => response.json())
       .then(users => {
-        this.setState({user: users[2]})
+        this.setState({user: users[3]})
       })
     };
   
@@ -86,10 +86,15 @@ class App extends React.Component {
     }).then(this.getSightings)
   }
 
+  deleteUserSighting = (id) => {
+    fetch(`http://localhost:3000/sightings/${id}`, {
+      method: 'DELETE'
+    })
+      .then(response => this.getUser())
+  };
+
   render() {
-    console.log('location', this.state.animalSightings.map(sighting => {
-     return sighting 
-    }));
+    console.log('user', this.state.user);
     return (
       <React.Fragment>
           <Router> 
@@ -104,17 +109,27 @@ class App extends React.Component {
                     marks={this.state.marks}
                 /> )}}
               />
+              <Route path="/updateForm/"  exact render={() => {
+                return (
+                  <UpdateForm 
+                    user={this.state.user} 
+                    handleChange={this.handleChange}
+                    updateUser={this.updateUser}
+                    getUser={this.getUser}
+                  />
+                )
+              }}/>
               { this.state.user.sightings ? 
                 <Route path="/profile/" render={(...props) => {
                 return (
                   <Profile 
                     user={this.state.user} 
                     updateUser={this.updateUser}
-                    deleteFavorite={this.deleteFavorite}
+                    deleteUserSighting={this.deleteUserSighting}
                     animalSightings={this.state.animalSightings}
                   />  
                 )
-                }} /> : null }
+              }} /> : null }
             </Switch>
           </Router>
       </React.Fragment>
