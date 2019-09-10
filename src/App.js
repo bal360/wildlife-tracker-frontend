@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import SightingForm from './components/SightingForm';
-import MapSearch from './components/MapSearch';
 import NavBar from './components/NavBar';
 import AddSearchModal from './components/AddSearchModal';
 import Profile from './components/Profile';
@@ -44,7 +43,12 @@ class App extends React.Component {
     const markerArray = result.reduce((array, sighting) => {
       const sightingObj = {
         lat: sighting.latitude,
-        lng: sighting.longitude
+        lng: sighting.longitude,
+        animal: sighting.animal,
+        location: sighting.location,
+        date: sighting.date,
+        time: sighting.time,
+        note: sighting.note
       }
       array.push(sightingObj)
       return array

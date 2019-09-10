@@ -39,12 +39,16 @@ class Home extends Component {
                 <SightingForm addSighting={this.props.addSighting} />
                 </Modal>
                     <Row> 
-                      <Col xs={12} md={8}> <MapContainer animalSightings={this.props.animalSightings} marks={this.props.marks}/> </Col>
+                      <Col xs={12} md={8}> 
+                        <MapContainer 
+                            animalSightings={this.props.animalSightings} 
+                            marks={this.props.marks}
+                        /> 
+                      </Col>
                       <Col xs={6} md={4} className="sighting-container"> 
                         <SightingContainer 
                             animalSightings={this.props.animalSightings} 
-                            
-                            /> 
+                        /> 
                       </Col>
                     </Row>
             </Container>

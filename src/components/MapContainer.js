@@ -2,12 +2,26 @@ import React from 'react';
 import { Map, GoogleApiWrapper, Marker, InfoWindow } from 'google-maps-react';
 
 class MapContainer extends React.Component {
-  // constructor(props) {
-  //   super(props)
-  //   this.state = {
-  //     marks: []
-  //   }
-  // };
+  state = {
+    showingInfoWindow: false,
+    activeMarker: {}
+  };
+
+  onMarkerClick = (props, marker, e) =>
+  this.setState({
+    activeMarker: marker,
+    showingInfoWindow: true
+  });
+
+  onClose = props => {
+    if (this.state.showingInfoWindow) {
+      this.setState({
+        showingInfoWindow: false,
+        activeMarker: null
+      });
+    }
+  };
+
 
   // markers = (result) => { 
   //   const markerArray = result.reduce((array, sighting) => {
@@ -21,27 +35,44 @@ class MapContainer extends React.Component {
   //   this.setState({marks: markerArray})
   // }
 
+
+
   render() {
-    console.log('marks', this.props.marks);
-    // this.markers(this.props.animalSightings)
     return (
       <React.Fragment>
         <Map
           className="map"
           google={this.props.google}
-          zoom={12}
-          style={{width: '70%', height: '25%'}}
+          zoom={8}
+          style={{width: '100%', height: '20%'}}
           initialCenter={{
-          lat: 39,
-          lng: -104
+            lat: 39.7392358,
+            lng: -104.990251
           }} 
         >
-          {this.props.marks.map(marker => (
-            <Marker
-              position={{ lat: marker.lat, lng: marker.lng }}
-              key={marker.id}
-            />
-          ))}
+          {this.props.marks.map(marker => {
+            return (
+              <Marker
+                position={{ lat: marker.lat, lng: marker.lng }}
+                key={marker.id}
+                onClick={this.onMarkerClick}
+                // content={{animal: marker.animal}}
+                >
+                </Marker>
+                )
+              })}
+          {this.props.marks.map(marker => {
+            return (
+              <InfoWindow
+              marker={this.state.activeMarker}
+              visible={this.state.showingInfoWindow}
+              onClose={this.onClose}
+              >
+              <div>{marker.animal}</div>
+              </InfoWindow>
+            )
+          })}
+       
         </Map>
       </React.Fragment>
     );
@@ -49,6 +80,6 @@ class MapContainer extends React.Component {
 }
 
 export default GoogleApiWrapper({
-  // apiKey: 'AIzaSyB0pyabJG-sUhHBG-qn9jtk1RoL3YZTaeg'
+  apiKey: 'AIzaSyB0pyabJG-sUhHBG-qn9jtk1RoL3YZTaeg'
 })(MapContainer);
 
