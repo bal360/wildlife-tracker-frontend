@@ -10,25 +10,25 @@ class Home extends Component {
           open: false
         };
         
-        setOpen = () => {
-            this.setState({
-                open: !this.state.open
-            })
-        };
-        
-        handleOpen = () => {
-            this.setOpen(true);
-        };
-        
-        handleClose = () => {
-            this.setOpen(false);
-        };
+    setOpen = () => {
+        this.setState({
+            open: !this.state.open
+        })
+    };
+    
+    handleOpen = () => {
+        this.setOpen(true);
+    };
+    
+    handleClose = () => {
+        this.setOpen(false);
+    };
 
     render() { 
         return ( 
             <Container>
                  <button type="button" onClick={this.handleOpen}>
-                    Open Modal
+                    New Sighting
                 </button>
                 <Modal
                     aria-labelledby="simple-modal-title"

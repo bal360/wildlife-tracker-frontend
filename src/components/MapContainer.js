@@ -4,14 +4,19 @@ import { Map, GoogleApiWrapper, Marker, InfoWindow } from 'google-maps-react';
 class MapContainer extends React.Component {
   state = {
     showingInfoWindow: false,
-    activeMarker: {}
+    activeMarker: {},
+    selectedPlace: {}
   };
-
-  onMarkerClick = (props, marker, e) =>
-  this.setState({
-    activeMarker: marker,
-    showingInfoWindow: true
+  
+  onMarkerClick = (props, marker, e) => {
+    console.log('check', props);
+    
+    this.setState({
+      selectedPlace: props,
+      activeMarker: marker,
+      showingInfoWindow: true
   });
+}
 
   onClose = props => {
     if (this.state.showingInfoWindow) {
@@ -56,19 +61,31 @@ class MapContainer extends React.Component {
                 position={{ lat: marker.lat, lng: marker.lng }}
                 key={marker.id}
                 onClick={this.onMarkerClick}
-                // content={{animal: marker.animal}}
-                >
-                </Marker>
-                )
-              })}
+                animal={marker.animal}
+                location={marker.location}
+                date={marker.date}
+                time={marker.time}
+                note={marker.note}
+              />
+            )
+          })}
+          
           {this.props.marks.map(marker => {
             return (
               <InfoWindow
-              marker={this.state.activeMarker}
-              visible={this.state.showingInfoWindow}
-              onClose={this.onClose}
+                marker={this.state.activeMarker}
+                visible={this.state.showingInfoWindow}
+                onClose={this.onClose}
+                content={marker.animal}
               >
-              <div>{marker.animal}</div>
+                <div>
+                  <h1>{this.state.selectedPlace.animal}</h1>
+                  <h2>{this.state.selectedPlace.location}</h2>
+                  <h3>{this.state.selectedPlace.date}</h3>
+                  <h4>{this.state.selectedPlace.time}</h4>
+                  <p>{this.state.selectedPlace.note}</p>
+                </div>  
+
               </InfoWindow>
             )
           })}
