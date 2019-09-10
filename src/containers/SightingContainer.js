@@ -18,11 +18,14 @@ const SightingContainer = (props) => {
         )
     });
 
-
-    return(
-        <div className="search">
-            {sightings}
-        </div>
+return(
+    <>
+        <Container>
+            <Row>
+                {sightings}
+            </Row>    
+        </Container>    
+    </>
     )
 };
 

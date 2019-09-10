@@ -61,10 +61,7 @@ class SightingForm extends React.Component {
         this.addLatLng()
     };
     
-    
-    
     render() {
-        // console.log(this.props);
         return(
             <form 
                 className="sighting-form" 
@@ -87,7 +84,7 @@ class SightingForm extends React.Component {
                 {/* want location to be autopopulated from map search - i.e. search, enter, form pops up with location auto-populated and then fill out the necessary input fields*/}
                 {/* <input type="text" placeholder="location"/>  */}
                 <input 
-                    type="text" 
+                    type="date" 
                     name="date"
                     placeholder="date"
                     value={this.state.date}
@@ -95,7 +92,7 @@ class SightingForm extends React.Component {
                     />
                 {/* use materialize datepicker and timepicker components here  */}
                 <input 
-                    type="text" 
+                    type="time" 
                     name="time"
                     placeholder="time"
                     value={this.state.time}

@@ -26,8 +26,8 @@ class Home extends Component {
 
     render() { 
         return ( 
-            <Container>
-                 <button type="button" onClick={this.handleOpen}>
+            <React.Fragment>
+                <button type="button" onClick={this.handleOpen}>
                     New Sighting
                 </button>
                 <Modal
@@ -38,21 +38,21 @@ class Home extends Component {
                 >
                 <SightingForm addSighting={this.props.addSighting} />
                 </Modal>
-                    <Row> 
-                      <Col xs={12} md={8}> 
-                        <MapContainer 
-                            animalSightings={this.props.animalSightings} 
-                            marks={this.props.marks}
-                        /> 
-                      </Col>
-                      <Col xs={6} md={4} className="sighting-container"> 
-                        <SightingContainer 
-                            animalSightings={this.props.animalSightings} 
-                        /> 
-                      </Col>
-                    </Row>
-            </Container>
-         );
+            <div className="main-container">
+                <div className="map-container">
+                    <MapContainer 
+                        animalSightings={this.props.animalSightings} 
+                        marks={this.props.marks}
+                    />
+                </div>
+                <div className="sighting-container">
+                    <SightingContainer 
+                        animalSightings={this.props.animalSightings} 
+                    />
+                </div>     
+            </div>     
+            </React.Fragment>
+        );
     }
 }
  

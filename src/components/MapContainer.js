@@ -9,14 +9,12 @@ class MapContainer extends React.Component {
   };
   
   onMarkerClick = (props, marker, e) => {
-    console.log('check', props);
-    
     this.setState({
       selectedPlace: props,
       activeMarker: marker,
       showingInfoWindow: true
-  });
-}
+    });
+  }
 
   onClose = props => {
     if (this.state.showingInfoWindow) {
@@ -27,29 +25,14 @@ class MapContainer extends React.Component {
     }
   };
 
-
-  // markers = (result) => { 
-  //   const markerArray = result.reduce((array, sighting) => {
-  //     const sightingObj = {
-  //       lat: sighting.latitude,
-  //       lng: sighting.longitude
-  //     }
-  //     array.push(sightingObj)
-  //     return array
-  //   }, [])
-  //   this.setState({marks: markerArray})
-  // }
-
-
-
-  render() {
+render() {
     return (
       <React.Fragment>
         <Map
           className="map"
           google={this.props.google}
           zoom={8}
-          style={{width: '100%', height: '20%'}}
+          style={{width: '45%', height: '70%', position: 'fixed'}}
           initialCenter={{
             lat: 39.7392358,
             lng: -104.990251
@@ -79,17 +62,15 @@ class MapContainer extends React.Component {
                 content={marker.animal}
               >
                 <div>
-                  <h1>{this.state.selectedPlace.animal}</h1>
-                  <h2>{this.state.selectedPlace.location}</h2>
-                  <h3>{this.state.selectedPlace.date}</h3>
+                  <h3>{this.state.selectedPlace.animal}</h3>
+                  <h4>{this.state.selectedPlace.location}</h4>
+                  <h4>{this.state.selectedPlace.date}</h4>
                   <h4>{this.state.selectedPlace.time}</h4>
-                  <p>{this.state.selectedPlace.note}</p>
+                  <p><b>{this.state.selectedPlace.note}</b></p>
                 </div>  
-
               </InfoWindow>
             )
           })}
-       
         </Map>
       </React.Fragment>
     );

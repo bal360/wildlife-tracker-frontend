@@ -1,18 +1,30 @@
 body {
-  background-color: rgb(196, 189, 189);
+  background-color: rgba(179, 176, 176, 0.24);
 }
-/* 
-.app {
+
+/* .app {
   display: flex;
   text-align: center;
 } */
 
-.sighting-container {
-  overflow: scroll;
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+  padding-top: 100px;
 }
 
-.search {
-  flex-wrap: wrap;
+.map-container {
+  margin-left: 100px;
+}
+
+.sighting-container {
+  overflow: scroll;
+  margin-left: 280px;
+}
+
+.cards {
+  grid-template-columns: 1fr 1fr;
 }
 
 .navbar {
@@ -24,26 +36,35 @@ body {
   justify-content: center;
 }
 
-.row {
-  /* justify-content: space-between; */
-  margin-top: 50px;
-}
-
 /* Card Styling */
+
+.row {
+  justify-content: space-around;
+  margin-top: 0px;
+}
 
 .card {
   margin-top: 50px;
 }
 
+.card-img-overlay {
+  position: inherit;
+  padding: 0;
+}
+
+/* 237, 230, 173 */
+
 .list-group-item {
-  background-color: rgba(104, 93, 93, 0.384);
+  background-color: rgba(237, 229, 173, 0.692);
   color: white;
   font-weight: bold;
 }
 
+
+
 .sighting-form {
   position: 'absolute';
-  /* width: 400px; */
+  width: 400;
   background-color: rgba(85, 83, 83, 0.247);
   border: '2px solid #000';
   box-shadow: 0 5px 5px -6px black;
