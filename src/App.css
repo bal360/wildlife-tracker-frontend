@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
+
 body {
   background-color: rgba(179, 176, 176, 0.24);
 }
@@ -52,15 +54,15 @@ body {
   padding: 0;
 }
 
-/* 237, 230, 173 */
-
 .list-group-item {
   background-color: rgba(237, 229, 173, 0.692);
   color: white;
   font-weight: bold;
 }
 
-
+.card-body {
+  background-color: rgba(237, 229, 173, 0.692);
+}
 
 .sighting-form {
   position: 'absolute';
@@ -73,10 +75,30 @@ body {
   left: 50%;
 }
 
-.modal {
+/* .modal {
   height: 200px;
   position: relative;
   border: 3px solid green;
+} */
+
+.profileJumbo {
+  display: flex;
+  font-family: 'Work Sans', sans-serif;
+  background-color: rgba(241, 241, 243, 0.048);
+  color: rgba(87, 82, 82, 0.849);
+  border-color: black;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.updateJumbo {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  font-family: 'Work Sans', sans-serif;
+  background-color: rgba(219, 220, 224, 0.041);
+  color: black;
+  border-color: black;
 }
 
 
