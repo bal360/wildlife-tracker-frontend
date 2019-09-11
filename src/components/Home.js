@@ -4,6 +4,7 @@ import MapContainer from './MapContainer';
 import SightingContainer from '../containers/SightingContainer';
 import SightingForm from './SightingForm';
 import Modal from '@material-ui/core/Modal';
+import AddSearchButton from './AddSearchButton';
 
 class Home extends Component {
       state = { 
@@ -27,7 +28,7 @@ class Home extends Component {
     render() { 
         return ( 
             <React.Fragment>
-                <button type="button" onClick={this.handleOpen}>
+                {/* <button type="button" onClick={this.handleOpen}>
                     New Sighting
                 </button>
                 <Modal
@@ -37,7 +38,8 @@ class Home extends Component {
                     onClose={this.handleClose}
                 >
                 <SightingForm addSighting={this.props.addSighting} />
-                </Modal>
+                </Modal> */}
+                <AddSearchButton addSighting={this.props.addSighting}/>
             <div className="main-container">
                 <div className="map-container">
                     <MapContainer 

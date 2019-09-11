@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import SightingForm from './components/SightingForm';
 import NavBar from './components/NavBar';
-import AddSearchModal from './components/AddSearchModal';
+import AddSearchModal from './components/AddSearchButton';
 import Profile from './components/Profile';
 import Home from './components/Home';
 import UpdateForm from './components/UpdateForm'
@@ -12,7 +12,6 @@ import UpdateForm from './components/UpdateForm'
 class App extends React.Component {
   state = {
     animalSightings: [],
-    searchForm: [],
     marks: [],
     user: {}
   };
@@ -94,7 +93,6 @@ class App extends React.Component {
   };
 
   render() {
-    console.log('user', this.state.user);
     return (
       <React.Fragment>
           <Router> 
