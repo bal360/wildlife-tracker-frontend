@@ -30,7 +30,7 @@ class SightingCard extends React.Component {
                     <ListGroupItem>Time: {this.props.time}</ListGroupItem>
                     <ListGroupItem>Note: {this.props.note}</ListGroupItem>
                 </ListGroup>
-                { this.state.favorited ? null :
+                { this.state.sighted ? null :
                     <Card.Body>
                         <Card.Link onClick={() => this.handleClick(
                             this.props.animal, 

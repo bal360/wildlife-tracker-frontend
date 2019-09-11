@@ -1,9 +1,7 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
-import SightingForm from './components/SightingForm';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 import NavBar from './components/NavBar';
-import AddSearchModal from './components/AddSearchButton';
 import Profile from './components/Profile';
 import Home from './components/Home';
 import UpdateForm from './components/UpdateForm'
@@ -13,7 +11,8 @@ class App extends React.Component {
   state = {
     animalSightings: [],
     marks: [],
-    user: {}
+    user: {},
+    userSightings: []
   };
 
   componentDidMount() {
@@ -25,7 +24,7 @@ class App extends React.Component {
     fetch('http://localhost:3000/users')
       .then(response => response.json())
       .then(users => {
-        this.setState({user: users[3]})
+        this.setState({user: users[3], userSightings: users[3].sightings})
       })
     };
   
@@ -54,26 +53,6 @@ class App extends React.Component {
     }, [])
     this.setState({marks: markerArray})
   };
-
-  
-  // addSighting = (sighting) => {
-  //   fetch('http://localhost:3000/sightings', {
-  //     method: 'POST',
-  //     headers: {
-  //       'Content-Type': 'application/json'
-  //     },
-  //     body: JSON.stringify({
-  //       animal: sighting.animal,
-  //       location: sighting.location,
-  //       date: sighting.date,
-  //       time: sighting.time,
-  //       note: sighting.note,
-  //       latitude: sighting.latitude,
-  //       longitude: sighting.longitude,
-  //       user_id: this.state.user.id
-  //     })
-  //   }).then(this.getSightings)
-  // };
 
   addSighting = (apiBody) => {
     fetch('http://localhost:3000/sightings', {

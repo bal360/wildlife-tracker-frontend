@@ -2,8 +2,6 @@ import React, {Component} from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import MapContainer from './MapContainer';
 import SightingContainer from '../containers/SightingContainer';
-import SightingForm from './SightingForm';
-import Modal from '@material-ui/core/Modal';
 import AddSearchButton from './AddSearchButton';
 
 class Home extends Component {
