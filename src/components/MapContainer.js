@@ -32,7 +32,7 @@ render() {
           className="map"
           google={this.props.google}
           zoom={8}
-          style={{width: '100%', height: '100%' }}
+          style={{width: '100%', height: '100%'}}
           initialCenter={{
             lat: 39.7392358,
             lng: -104.990251

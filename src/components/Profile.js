@@ -23,7 +23,9 @@ const Profile = (props) => {
         )
     });
 
+    console.log('profile', sightings);
    return ( 
+       
         <div>
         <Jumbotron 
             className="profileJumbo"

@@ -11,10 +11,9 @@ class App extends React.Component {
   state = {
     animalSightings: [],
     marks: [],
-    user: {},
-    userSightings: []
+    user: {}
   };
-
+  
   componentDidMount() {
     this.getSightings()
     this.getUser();
@@ -22,18 +21,18 @@ class App extends React.Component {
   
   getUser = () => {
     fetch('http://localhost:3000/users')
-      .then(response => response.json())
-      .then(users => {
-        this.setState({user: users[3], userSightings: users[3].sightings})
-      })
-    };
+    .then(response => response.json())
+    .then(users => {
+      this.setState({user: users[4]})
+    })
+  };
   
   getSightings = () => {
     fetch('http://localhost:3000/sightings')
     .then(response => response.json())
     .then(result => this.markers(result))
   };
-
+  
   markers = (result) => { 
     this.setState({
       animalSightings: result
@@ -63,15 +62,16 @@ class App extends React.Component {
       body: JSON.stringify(apiBody)
     }).then(this.getSightings)
   }
-
+  
   deleteUserSighting = (id) => {
     fetch(`http://localhost:3000/sightings/${id}`, {
       method: 'DELETE'
     })
-      .then(response => this.getUser())
+    .then(response => this.getUser())
   };
-
+  
   render() {
+    console.log(this.state.animalSightings);
     return (
       <React.Fragment>
           <Router> 
@@ -80,8 +80,8 @@ class App extends React.Component {
               <Route path="/" exact render={(...props) => {
                 return (
                   <Home 
-                    user={this.state.user} 
-                    animalSightings={this.state.animalSightings}
+                  user={this.state.user} 
+                  animalSightings={this.state.animalSightings}
                     addSighting={this.addSighting} 
                     marks={this.state.marks}
                 /> )}}

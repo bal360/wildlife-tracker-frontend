@@ -5,24 +5,26 @@ import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import Fab from '@material-ui/core/Fab';
+import AddLocationIcon from '@material-ui/icons/AddLocation';
 import Geocode from 'react-geocode';
 
 Geocode.setApiKey('AIzaSyB0pyabJG-sUhHBG-qn9jtk1RoL3YZTaeg')
-  
+
 class AddSearchButton extends React.Component {
-      state = {
-        animal: "",
-        location: "",
-        date: "",
-        time: "",
-        note: "",
-        coord: {
-            lat: 0.0,
-            lng: 0.0
-        },
-        open: false
-    };
-    
+  state = {
+    animal: "",
+    location: "",
+    date: "",
+    time: "",
+    note: "",
+    coord: {
+      lat: 0.0,
+      lng: 0.0
+    },
+    open: false
+  };
+  
   addLatLng = () => {
     const address = this.state.location
     const latLng = []
@@ -63,11 +65,6 @@ class AddSearchButton extends React.Component {
     })
   };
   
-  // handleSubmit = (event) => {
-  //   event.preventDefault()
-  //   this.addLatLng()
-  // };
-  
   setOpen = () => {
       this.setState({
           open: !this.state.open
@@ -88,12 +85,11 @@ class AddSearchButton extends React.Component {
   }
 
   render() {
-    console.log('check form', this.props);
-  return (
+    return (
       <React.Fragment>
-        <Button variant="outlined" color="primary" onClick={this.handleClickOpen}>
-          Add A Sighting
-        </Button>
+        <Fab aria-label="add" size="smalllarge" style={{ marginLeft: '25px', marginTop: "25px"}} onClick={this.handleClickOpen}>
+          <AddLocationIcon/>
+        </Fab>
         <Dialog open={this.state.open} onClose={this.cancel} aria-labelledby="form-dialog-title">
           <DialogTitle id="form-dialog-title">What did you see?</DialogTitle>
           <DialogContent>

@@ -26,17 +26,6 @@ class Home extends Component {
     render() { 
         return ( 
             <React.Fragment>
-                {/* <button type="button" onClick={this.handleOpen}>
-                    New Sighting
-                </button>
-                <Modal
-                    aria-labelledby="simple-modal-title"
-                    aria-describedby="simple-modal-description"
-                    open={this.state.open}
-                    onClose={this.handleClose}
-                >
-                <SightingForm addSighting={this.props.addSighting} />
-                </Modal> */}
                 <AddSearchButton addSighting={this.props.addSighting}/>
             <div className="main-container">
                 <div className="map-container">
