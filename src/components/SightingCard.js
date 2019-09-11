@@ -1,5 +1,7 @@
 import React from 'react';
 import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
+import AddIcon from '@material-ui/icons/Add';
+import DeleteIcon from '@material-ui/icons/Delete';
 
 class SightingCard extends React.Component {
     constructor(props){
@@ -39,7 +41,7 @@ class SightingCard extends React.Component {
                             this.props.time, 
                             this.props.note
                         )}>
-                            {this.props.addFavorite ? "Add Sighting" : "Delete Sighting"}
+                            {this.props.addFavorite ? <AddIcon/> : <DeleteIcon />}
                         </Card.Link> 
                     </Card.Body>
                 }

@@ -32,7 +32,7 @@ const Profile = (props) => {
             
         >
             <h1>Name: {user.first_name} {user.last_name} </h1>
-            <h2>Location: {user.city} {user.state}</h2>
+            <h2>Location: {user.city}, {user.state}</h2>
             <h3>Email: {user.email}</h3>
             <Button 
                 variant="primary" 

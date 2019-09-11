@@ -87,7 +87,7 @@ class AddSearchButton extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Fab aria-label="add" size="smalllarge" style={{ marginLeft: '25px', marginTop: "25px"}} onClick={this.handleClickOpen}>
+        <Fab aria-label="add" size="smalllarge" style={{ marginLeft: '25px', marginTop: "25px" }} onClick={this.handleClickOpen}>
           <AddLocationIcon/>
         </Fab>
         <Dialog open={this.state.open} onClose={this.cancel} aria-labelledby="form-dialog-title">

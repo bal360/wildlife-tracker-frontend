@@ -80,8 +80,8 @@ class App extends React.Component {
               <Route path="/" exact render={(...props) => {
                 return (
                   <Home 
-                  user={this.state.user} 
-                  animalSightings={this.state.animalSightings}
+                    user={this.state.user} 
+                    animalSightings={this.state.animalSightings}
                     addSighting={this.addSighting} 
                     marks={this.state.marks}
                 /> )}}
