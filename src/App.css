@@ -51,7 +51,6 @@ body {
   opacity: 0.7;
 }
 
-/* Card Styling */
 .row {
   justify-content: space-around;
   margin-top: 0px;
@@ -68,7 +67,6 @@ body {
 .card-tile {
   background-color: rgba(237, 229, 173, 0.692)
 }
-
 
 .card-img-top {
   background-color: rgba(243, 242, 233, 0.925);
@@ -87,14 +85,46 @@ body {
   cursor: pointer;
 }
 
-.profileJumbo {
-  display: flex;
+.profileJumbo { 
   font-family: 'Assistant', sans-serif;
   background-color: rgba(241, 241, 243, 0.048);
   color: rgba(87, 82, 82, 0.849);
   border-color: black;
   text-align: center;
   justify-content: space-between;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin-bottom: 25px;
+}
+
+.profileButton {
+  background-color: rgba(173, 172, 133);
+  border-color: black;
+}
+
+.profileButton:hover {
+  background-color: white;
+  color: rgba(173, 172, 133);
+}
+
+.updateButton {
+  background-color: rgba(173, 172, 133);
+  border-color: black;
+}
+
+.updateButton:hover {
+  background-color: white;
+  color: rgba(173, 172, 133);
+  border-color: black;
 }
 
 .updateJumbo {
