@@ -14,7 +14,7 @@ const SightingContainer = (props) => {
                 date={sighting.date} 
                 time={sighting.time} 
                 note={sighting.note} 
-                addFavorite={props.addFavorite}
+                trackSighting={props.trackSighting}
             /> 
             :  null
     });

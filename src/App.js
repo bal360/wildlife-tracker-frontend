@@ -69,6 +69,10 @@ class App extends React.Component {
     })
     .then(response => this.getUser())
   };
+
+  trackSighting = () => {
+
+  };
   
   render() {
     return (
@@ -83,6 +87,7 @@ class App extends React.Component {
                     animalSightings={this.state.animalSightings}
                     addSighting={this.addSighting} 
                     marks={this.state.marks}
+                    trackSighting={this.trackSighting}
                 /> )}}
               />
               <Route path="/updateForm/"  exact render={() => {

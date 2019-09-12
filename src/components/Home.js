@@ -37,6 +37,7 @@ class Home extends Component {
                 <div className="sighting-container">
                     <SightingContainer 
                         animalSightings={this.props.animalSightings} 
+                        trackSighting={this.trackSighting}
                     />
                 </div>     
             </div>     

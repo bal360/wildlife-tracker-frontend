@@ -9,7 +9,8 @@ class SightingCard extends React.Component {
         this.state = {
             sighted: false,
         }
-    }
+    };
+    
     
     handleClick = (...sighting) => { 
         if (this.props.trackSighting) {
@@ -19,9 +20,12 @@ class SightingCard extends React.Component {
             this.props.deleteUserSighting(this.props.id)
             this.setState({ sighted: false })        
         }
-    }
+    };
 
+    
+    
     render() {
+        console.log('track', this.props.trackSighting);
         return ( 
             <Card style={{ width: '18rem' }} className="bg-dark">
                 <Card.Img variant="top" src="https://i.pinimg.com/originals/4a/84/48/4a8448a4af3a5de2e1c5e04dd3670a94.jpg" />
@@ -41,7 +45,7 @@ class SightingCard extends React.Component {
                             this.props.time, 
                             this.props.note
                         )}>
-                            {this.props.trackSighting ? <AddIcon /> : <DeleteIcon />}
+                            {this.props.user_id == 8 ? null : <DeleteIcon />}
                         </Card.Link> 
                     </Card.Body>
                 }
