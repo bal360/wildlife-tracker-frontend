@@ -70,7 +70,7 @@ render() {
                   <h4>{this.state.selectedPlace.location}</h4>
                   <h4>{this.state.selectedPlace.date}</h4>
                   <h4>{this.state.selectedPlace.time}</h4>
-                  <p><b>{this.state.selectedPlace.note}</b></p>
+                  <p><b><big>{this.state.selectedPlace.note}</big></b></p>
                 </div>  
               </InfoWindow>
             )

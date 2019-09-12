@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Assistant|Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Assistant|Indie+Flower|Lacquer&display=swap');
 
 body {
   /* background-color: rgba(179, 176, 176, 0.24); */
@@ -35,15 +34,15 @@ body {
 }
 
 .navbar {
-  font-family: 'Indie Flower', cursive;
-  font-size: 40px;
+  font-family: 'Lacquer', sans-serif;
+  font-size: 45px;
   color: rgba(0, 0, 0, 0.596);
   border-bottom: 3px solid rgba(175, 172, 133, 0.808);
   margin-top: 4px;
   margin-bottom: 15px;
 }
 .nav-link {
-  font-size: 30px;
+  font-size: 35px;
   margin-left: 800px;
   color: black;
 }
