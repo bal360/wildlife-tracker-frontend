@@ -36,7 +36,6 @@ class AddSearchButton extends React.Component {
     .then(coordinates => this.setState(state => {
       state.coord.lat = coordinates.lat;
       state.coord.lng = coordinates.lng
-      console.log('working?', this.state);
     return state
     }))
     .then(response => this.postSighting())
@@ -87,8 +86,8 @@ class AddSearchButton extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Fab aria-label="add" size="smalllarge" style={{ marginLeft: '25px', marginTop: "25px" }} onClick={this.handleClickOpen}>
-          <AddLocationIcon/>
+        <Fab aria-label="add" size="large"   style={{ height: "90px", width: "90px", marginLeft: '25px', marginTop: "25px" }} onClick={this.handleClickOpen}>
+          <AddLocationIcon style={{ height: "60px", width: "60px" }}/>
         </Fab>
         <Dialog open={this.state.open} onClose={this.cancel} aria-labelledby="form-dialog-title">
           <DialogTitle id="form-dialog-title">What did you see?</DialogTitle>

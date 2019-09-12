@@ -12,8 +12,8 @@ class SightingCard extends React.Component {
     }
     
     handleClick = (...sighting) => { 
-        if (this.props.addFavorite) {
-            this.props.addSighting(...sighting)
+        if (this.props.trackSighting) {
+            this.props.trackSighting(...sighting)
             this.setState({ sighted: true })        
         } else {
             this.props.deleteUserSighting(this.props.id)
@@ -41,7 +41,7 @@ class SightingCard extends React.Component {
                             this.props.time, 
                             this.props.note
                         )}>
-                            {this.props.addFavorite ? <AddIcon/> : <DeleteIcon />}
+                            {this.props.trackSighting ? <AddIcon /> : <DeleteIcon />}
                         </Card.Link> 
                     </Card.Body>
                 }

@@ -8,10 +8,11 @@ const NavBar = () => {
         <Navbar className="navbar">
             <Navbar.Brand href="#home" className="nav-brand">
                 <img 
+                className="logo"
                 src="https://www.stickpng.com/assets/images/58aeffaac869e092af51ee73.png" 
                 alt="coyote tracks logo" 
                 height="100" 
-                />
+            />
             </Navbar.Brand>
                 WildTracker
                 <Nav className="mr-auto">

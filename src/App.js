@@ -71,7 +71,6 @@ class App extends React.Component {
   };
   
   render() {
-    console.log(this.state.animalSightings);
     return (
       <React.Fragment>
           <Router> 
