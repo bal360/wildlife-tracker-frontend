@@ -114,6 +114,7 @@ h3 {
 .profileButton:hover {
   background-color: white;
   color: rgba(173, 172, 133);
+  border-color: black;
 }
 
 .updateButton {
