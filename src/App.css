@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Assistant|Indie+Flower|Lacquer|Lemonada&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Assistant|Covered+By+Your+Grace|Duru+Sans|Indie+Flower|Lemonada|Permanent+Marker|Reenie+Beanie|Roboto+Condensed|The+Girl+Next+Door&display=swap');
 
 body {
   /* background-color: rgba(179, 176, 176, 0.24); */
@@ -34,17 +34,19 @@ body {
 }
 
 .navbar {
-  font-family: 'Lemonada', cursive;
-  font-size: 45px;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 60px;
   color: rgba(0, 0, 0, 0.596);
   border-bottom: 3px solid rgba(175, 172, 133, 0.808);
   margin-top: 4px;
   margin-bottom: 15px;
 }
 .nav-link {
-  font-size: 35px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 40px;
   margin-left: 800px;
   color: black;
+  font-weight: bold;
 }
 
 .logo {
