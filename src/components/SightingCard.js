@@ -27,8 +27,8 @@ class SightingCard extends React.Component {
     render() {
         console.log('track', this.props.trackSighting);
         return ( 
-            <Card style={{ width: '18rem' }} className="bg-dark">
-                <Card.Img variant="top" src="https://i.pinimg.com/originals/4a/84/48/4a8448a4af3a5de2e1c5e04dd3670a94.jpg" />
+            <Card style={{ width: '18rem' }} className="bg-dark">    
+                    <Card.Img variant="top" src="http://nwwoodsman.com/images/Tracks.GIF" />
                 <ListGroup className="list-group-flush">
                     <ListGroupItem>Animal: {this.props.animal}</ListGroupItem>
                     <ListGroupItem>Location: {this.props.location}</ListGroupItem>
@@ -36,7 +36,7 @@ class SightingCard extends React.Component {
                     <ListGroupItem>Time: {this.props.time}</ListGroupItem>
                     <ListGroupItem>Note: {this.props.note}</ListGroupItem>
                 </ListGroup>
-                { this.state.sighted ? null :
+                { this.props.user_id == 8 ? null :
                     <Card.Body>
                         <Card.Link onClick={() => this.handleClick(
                             this.props.animal, 
