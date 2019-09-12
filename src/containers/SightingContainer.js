@@ -20,13 +20,13 @@ const SightingContainer = (props) => {
     });
     
     return(
-        <>
+        <React.Fragment>
             <Container>
                 <Row>
                     {sightings}
                 </Row>    
             </Container>    
-        </>
+        </React.Fragment>
     )
 };
 
