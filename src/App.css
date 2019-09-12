@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Assistant|Indie+Flower|Lacquer&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Assistant|Indie+Flower|Lacquer|Lemonada&display=swap');
 
 body {
   /* background-color: rgba(179, 176, 176, 0.24); */
@@ -34,7 +34,7 @@ body {
 }
 
 .navbar {
-  font-family: 'Lacquer', sans-serif;
+  font-family: 'Lemonada', cursive;
   font-size: 45px;
   color: rgba(0, 0, 0, 0.596);
   border-bottom: 3px solid rgba(175, 172, 133, 0.808);
@@ -69,11 +69,6 @@ body {
 .card-tile {
   background-color: rgba(237, 229, 173, 0.692)
 }
-
-/* .card-img-overlay {
-  position: inherit;
-  padding: 0;
-} */
 
 .card-img-top {
   background-color: rgba(243, 242, 233, 0.925);
