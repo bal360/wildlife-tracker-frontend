@@ -3,8 +3,6 @@ import { Container, Row } from 'react-bootstrap';
 import { withRouter } from 'react-router-dom'
 import { Jumbotron, Button } from 'react-bootstrap';
 import SightingCard from '../components/SightingCard';
-import UpdateForm from '../components/UpdateForm'
-
 
 const Profile = (props) => {
     
