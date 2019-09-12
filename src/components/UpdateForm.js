@@ -44,8 +44,8 @@ class UpdateForm extends React.Component {
         .then(response => this.props.getUser())
     };
         
-        render() {
-            return (
+    render() {
+        return (
             <Jumbotron className="updateJumbo">
                 <Form className="updateForm" onSubmit={this.handleUpdate}>
                     <Form.Group controlId="form-first-name">
