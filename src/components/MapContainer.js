@@ -44,10 +44,6 @@ render() {
                 position={{ lat: marker.lat, lng: marker.lng }}
                 key={marker.id}
                 onClick={this.onMarkerClick}
-                // icon={{
-                //   url:'https://c7.uihere.com/files/758/954/421/5bbc49b57fb5c.jpg',
-                //   scaledSize: new window.google.maps.Size(60, 60)
-                // }}
                 animal={marker.animal}
                 location={marker.location}
                 date={marker.date}
