@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Assistant|Covered+By+Your+Grace|Duru+Sans|Indie+Flower|Lemonada|Permanent+Marker|Reenie+Beanie|Roboto+Condensed|The+Girl+Next+Door&display=swap');
 
-body {
-  /* background-color: rgba(179, 176, 176, 0.24); */
-}
-
 .main-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
