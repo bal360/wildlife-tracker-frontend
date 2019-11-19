@@ -20,4 +20,4 @@ Fork
 
 ## Demo
 
-<img src="Nov-19-2019 15-43-53.mp4" height="42" width="42">
+<img src="Nov-19-2019 15-51-39.gif">
