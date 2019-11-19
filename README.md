@@ -19,5 +19,6 @@ Fork
 - `npm start`
 
 ## Demo
-Test.gif
+<img src="Test.gif">
+
 
