@@ -19,7 +19,5 @@ Fork
 - `npm start`
 
 ## Demo
+Test.gif
 
-<img src="Nov-19-2019 15-51-39.gif">
-
-[](Nov-19-2019 15-51-39.gif)
