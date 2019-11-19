@@ -8,4 +8,4 @@ The users sightings are stored in their profile page while the home page display
 Below is a brief demo. Thanks for checking it out!
 
 ## Built With
-Javascript | React | Rails | Google Maps Platform APIs | CSS | HTML | Material-UI | Bootstrap 
+React | Rails | Google Maps Platform APIs | CSS | HTML | Material-UI | Bootstrap 
