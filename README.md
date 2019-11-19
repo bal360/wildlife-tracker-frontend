@@ -19,6 +19,6 @@ React | Rails | Google Maps Platform APIs | CSS | HTML | Material-UI | Bootstrap
 - `npm start`
 
 ## Demo
-<img src="demo.gif">
+<img src="demo1.gif">
 
 
