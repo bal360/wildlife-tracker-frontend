@@ -13,7 +13,7 @@ React | Rails | Google Maps Platform APIs | CSS | HTML | Material-UI | Bootstrap
 ## Run Instructions
 *** Keep in mind that this app uses Google APIs. You will need to create an account [here](https://cloud.google.com/maps-platform/) in order to obtain an API key.
 
-Fork
+- Fork
 - `git clone`
 - `npm install`
 - `npm start`
