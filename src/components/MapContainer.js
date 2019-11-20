@@ -78,6 +78,6 @@ render() {
 }
 
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyB0pyabJG-sUhHBG-qn9jtk1RoL3YZTaeg'
+  apiKey: 'API Key Here'
 })(MapContainer);
 
