@@ -25,7 +25,7 @@ class MapContainer extends React.Component {
     }
   };
 
-render() {
+  render() {
     return (
       <React.Fragment>
         <Map
@@ -78,6 +78,6 @@ render() {
 }
 
 export default GoogleApiWrapper({
-  apiKey: 'API Key Here'
+  apiKey: 'AIzaSyDKqkZfP5PNVc6WOBZJga-cE3ucpRtmX0s'
 })(MapContainer);
 

@@ -9,7 +9,7 @@ import Fab from '@material-ui/core/Fab';
 import AddLocationIcon from '@material-ui/icons/AddLocation';
 import Geocode from 'react-geocode';
 
-Geocode.setApiKey('API Key Here')
+Geocode.setApiKey('AIzaSyDKqkZfP5PNVc6WOBZJga-cE3ucpRtmX0s')
 
 class AddSearchButton extends React.Component {
   state = {
