@@ -5,23 +5,23 @@ import SightingContainer from '../containers/SightingContainer';
 import AddSearchButton from './AddSearchButton';
 
 class Home extends Component {
-  state = { 
-    open: false
-    };
+  // state = { 
+  //   open: false
+  //   };
       
-  setOpen = () => {
-    this.setState({
-        open: !this.state.open
-    })
-  };
+  // setOpen = () => {
+  //   this.setState({
+  //       open: !this.state.open
+  //   })
+  // };
   
-  handleOpen = () => {
-    this.setOpen(true);
-  };
+  // handleOpen = () => {
+  //   this.setOpen(true);
+  // };
   
-  handleClose = () => {
-    this.setOpen(false);
-  };
+  // handleClose = () => {
+  //   this.setOpen(false);
+  // };
 
   render() { 
     return ( 
