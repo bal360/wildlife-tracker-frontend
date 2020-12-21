@@ -73,41 +73,41 @@ class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-          <Router> 
-            <NavBar />
-            <Switch>
-              <Route path="/" exact render={(...props) => {
-                return (
-                  <Home 
-                    user={this.state.user} 
-                    animalSightings={this.state.animalSightings}
-                    addSighting={this.addSighting} 
-                    marks={this.state.marks}
-                /> )}}
-              />
-              <Route path="/updateForm/"  exact render={() => {
-                return (
-                  <UpdateForm 
-                    user={this.state.user} 
-                    handleChange={this.handleChange}
-                    updateUser={this.updateUser}
-                    getUser={this.getUser}
-                  />
-                )
-              }}/>
-              { this.state.user.sightings ? 
-                <Route path="/profile/" render={(...props) => {
-                return (
-                  <Profile 
-                    user={this.state.user} 
-                    updateUser={this.updateUser}
-                    deleteUserSighting={this.deleteUserSighting}
-                    animalSightings={this.state.animalSightings}
-                  />  
-                )
-              }} /> : null }
-            </Switch>
-          </Router>
+        <Router> 
+          <NavBar />
+          <Switch>
+            <Route path="/" exact render={(...props) => {
+              return (
+                <Home 
+                  user={this.state.user} 
+                  animalSightings={this.state.animalSightings}
+                  addSighting={this.addSighting} 
+                  marks={this.state.marks}
+              /> )}}
+            />
+            <Route path="/updateForm/"  exact render={() => {
+              return (
+                <UpdateForm 
+                  user={this.state.user} 
+                  handleChange={this.handleChange}
+                  updateUser={this.updateUser}
+                  getUser={this.getUser}
+                />
+              )
+            }}/>
+            { this.state.user.sightings ? 
+              <Route path="/profile/" render={(...props) => {
+              return (
+                <Profile 
+                  user={this.state.user} 
+                  updateUser={this.updateUser}
+                  deleteUserSighting={this.deleteUserSighting}
+                  animalSightings={this.state.animalSightings}
+                />  
+              )
+            }} /> : null }
+          </Switch>
+        </Router>
       </React.Fragment>
     )
   }

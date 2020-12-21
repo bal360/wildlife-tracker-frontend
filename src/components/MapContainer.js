@@ -1,5 +1,6 @@
 import React from 'react';
 import { Map, GoogleApiWrapper, Marker, InfoWindow } from 'google-maps-react';
+import { ResponsiveEmbed } from 'react-bootstrap';
 
 class MapContainer extends React.Component {
   state = {
@@ -28,8 +29,10 @@ class MapContainer extends React.Component {
   render() {
     return (
       <React.Fragment>
+        <div style={{ width: '100%' , height: 'auto' }}>
+          <ResponsiveEmbed aspectRatio="16by9">
         <Map
-          className="map"
+          // className="map"
           google={this.props.google}
           zoom={8}
           style={{width: '100%', height: '100%'}}
@@ -72,12 +75,14 @@ class MapContainer extends React.Component {
             )
           })}
         </Map>
+          </ResponsiveEmbed>
+        </div>
       </React.Fragment>
     );
   }
 }
 
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyDKqkZfP5PNVc6WOBZJga-cE3ucpRtmX0s'
+  apiKey: 'Add New API Key'
 })(MapContainer);
 

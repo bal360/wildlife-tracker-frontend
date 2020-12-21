@@ -22,7 +22,7 @@ const SightingContainer = (props) => {
   return (
     <React.Fragment>
       <Container>
-        <Row>
+        <Row className="justify-content-end" style={{overflow: 'scroll', height: '1000px'}}>
           {sightings}
         </Row>    
       </Container>    
